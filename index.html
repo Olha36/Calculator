@@ -11,39 +11,39 @@
     
         <form id="calculator">
             <div class="calc-display">
-                <input data-operand type="text" id="display" value="0">
+                <input type="text" id="display" value="0">
             </div>
 
             <div class="calc-buttons">
                 <table class="calc-table">
                     <tbody>
                         <tr>
-                            <td><button type="button" class="clear" id="c">C</button></td>
-                            <td><button type="button" class="clear" id="ce">CE</button></td>
-                            <td><button type="button" class="operator">/</button></td>
-                            <td><button type="button" class="operator">*</button></td>
+                            <td><button type="button" class="btn clear" id="c">C</button></td>
+                            <td><button type="button" class="btn clear" id="ce">CE</button></td>
+                            <td><button type="button" class="btn operator">/</button></td>
+                            <td><button type="button" class="btn operator">*</button></td>
                         </tr>
                         <tr>
-                            <td><button type="button" class="num">7</button></td>
-                            <td><button type="button" class="num">8</button></td>
-                            <td><button type="button" class="num">9</button></td>
-                            <td><button type="button" class="operator">-</button></td>
+                            <td><button type="button" class="btn num">7</button></td>
+                            <td><button type="button" class="btn num">8</button></td>
+                            <td><button type="button" class="btn num">9</button></td>
+                            <td><button type="button" class="btn operator">-</button></td>
                         </tr>
                         <tr>
-                            <td><button type="button" class="num">4</button></td>
-                            <td><button type="button" class="num">5</button></td>
-                            <td><button type="button" class="num">6</button></td>
-                            <td><button type="button" class="operator">+</button></td>
+                            <td><button type="button" class="btn num">4</button></td>
+                            <td><button type="button" class="btn num">5</button></td>
+                            <td><button type="button" class="btn num">6</button></td>
+                            <td><button type="button" class="btn operator">+</button></td>
                         </tr>
                         <tr>
-                            <td><button type="button" class="num">1</button></td>
-                            <td><button type="button" class="num">2</button></td>
-                            <td><button type="button" class="num">3</button></td>
-                            <td rowspan="2"><button type="button" class="operator equal" id="result">=</button></td>
+                            <td><button type="button" class="btn num">1</button></td>
+                            <td><button type="button" class="btn num">2</button></td>
+                            <td><button type="button" class="btn num">3</button></td>
+                            <td rowspan="2"><button type="button" class="btn operator equal" id="result">=</button></td>
                         </tr>
                         <tr>
-                            <td colspan="2"><button type="button" class="num width">0</button></td>
-                            <td><button type="button" id="decimal">.</button></td>
+                            <td colspan="2"><button type="button" class="btn num width">0</button></td>
+                            <td><button type="button" id="decimal" class="btn">.</button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -59,6 +59,6 @@
    
 
 
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
