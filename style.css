@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background:  skyblue;
 }
 #calculator {
@@ -54,9 +51,28 @@ button:hover {
 .width {
     width: 106px;
 }
-/* .footer{
-    display: flex;
-    justify-content: center;
-} */
+footer {
+    position: absolute;
+    width: 100%;
+    padding-top: 100px;
+}
+footer img {
+    position: relative;
+    width: 200px;
+    animation-name: show;
+    animation-duration: 6s;
+    animation-iteration-count: infinite; 
+    animation-play-state: running; 
+    animation-timing-function: slidein;
+}
+@keyframes show {
+    0% { 
+        margin-left: 0%; 
+    }  
+    100% { 
+        margin-left: 85%; 
+    }
+} 
+
 
 
