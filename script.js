@@ -18,8 +18,8 @@ let digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 let action = ['+', '-', '*', '/'];
 // console.log(action);
 
-let out = document.querySelector('input');
-// console.log(out.value);
+let out = document.querySelector('.calc-screen p');
+// console.log(out);
 
 function clearAll() {
     a = '';
@@ -46,7 +46,66 @@ document.querySelector('.calc-table').onclick = (event) => {
 
     //проверяю нажата ли цифровая кнопка
     if (digits.includes(key)) {
-        //заношу цифровую кнопку в переменную
+        //условие, при котором при первом клике будет наполняться переменная "а", а при втором клике - переменная "в"
+        if (b === '' && sign === '') {
+            //заношу цифровую кнопку в переменную
+            a += key;
+        //    console.log(a, b, sign); 
+            out.textContent = a;
+        } else if(a !== '' && b !== '' && finish) {
+            //обнуляю переменную b и переменную finish
+            b = key;
+            finish = false;
+            out.textContent = b;
+        } else {
+            //наполняю переменную b
+            b += key;
+            out.textContent = b;
+        }
+        // console.log(a, b, sign);
+        return;
+    }
+
+    //проверяю нажат ли знак
+    if (action.includes(key)) {
+        //заношу знак в переменную
+        sign = key; //(если true, нажала знак)
+
+        //вывожу знак на экран
+        out.textContent = sign;
+        return;
+    }
+
+    //если нажато "="
+    if (key === '=') {
+        if (b === '') b = a;
+        //выполнить подсчеты
+        switch (sign) { 
+            case '+':
+                a = (+a) + (+b);
+                break;
+            case '-':
+                a = a - b;
+                break;
+            case '*':
+                a = a * b;
+                break;
+            case '/': 
+            if (b === '0') {
+                out.textContent = 'Ошибка';
+                a = '';
+                b= '';
+                sign = '';
+                return;
+            }
+                a = a / b;
+                break;
+        }
+        //вычисления закончены
+        finish = true;
+        //вывожу все вычисления в калькулятор
+        out.textContent = a;
+        console.log(a, b, sign);
     }
 
 }

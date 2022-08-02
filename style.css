@@ -10,24 +10,18 @@ body {
     background:  skyblue;
 }
 #calculator {
-    width: 300px;
-    height: 384px;
+    width: 220px;
+    height: 290px;
     border-radius: 5px;
     background-color: beige;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2), -2px -2px 3px rgba(0, 0, 0, 0.2);
     margin: 50px auto;
 }
-input {
-    width: 275px;
-    height: 40px;
-    border: none;
-    margin: 10px;
-    box-shadow: 2px 2px 10px 1px cornsilk;
-    border: 1px solid rgb(214, 214, 230);
-    border-radius: 5px;
-    text-align: right;
+.calc-screen p {
+    padding: 10px 36px 6px 0;
     font-size: 20px;
-    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
 }
 .calc-table {
     margin: 0 auto;
